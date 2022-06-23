@@ -1,0 +1,21 @@
+dotenv: .env
+
+wallets:
+  from_key: ${PRIVATE_KEY}
+
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.6.0
+
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.6.0'
+
+networks:
+  default: development
+  kovan:
+    verify: False
+  mainnet-fork-dev:
+    verify: False
+  local-ganache:
+    verify: False
